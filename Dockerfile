@@ -18,7 +18,6 @@ RUN apt-get update \
     automake \
   && rm -rf /var/lib/apt/lists/*
 
-
 # App
 FROM ubuntu:18.04
 

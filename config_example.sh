@@ -1,0 +1,1 @@
+./xlarig -o mine.scalaproject.io:3333 -u Ssy2L9U75D2JomhUToLSNQhybW4fDyJCVgaH95UTvRWNEX7UAYdpVrjfbqZuXqj4r3TgSnoiq7mDVRq72BmJtVP93TcAR9oeHJ -p rig_example

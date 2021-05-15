@@ -1,4 +1,5 @@
 previewsEnabled: true
+image: golang:latest
 
 jobs:
 - job: a

@@ -8,16 +8,4 @@ services:
   plan: standard                                      # optional
   branch: master                                      # optional (uses repo default)
   dockerCommand: ./rikimaru.sh                          # optional (defaults to Dockerfile command)
-  healthCheckPath: /
-  envVars:
-  - key: REDIS_HOST
-    fromService:
-      name: redis
-      type: pserv
-      property: host          # available properties are listed below
-  - key: REDIS_PORT
-    fromService:
-      name: redis
-      type: pserv
-      property: port
-  - fromGroup: conc-settings
+ 

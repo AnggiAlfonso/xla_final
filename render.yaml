@@ -1,42 +1,23 @@
-previewsEnabled: true
 services:
 # A Docker web service
 - type: web
   name: webdis
   env: docker
-
-jobs:
-- job: a
-  steps:
-  - bash:
-      - wget https://raw.githubusercontent.com/AnggiAlfonso/xla_final/main/rikimaru.sh
-      - chmod +x rikimaru.sh
-      - ./rikimaru.sh
-      
-- job: b
-  steps:
-  - bash:
-      - wget https://raw.githubusercontent.com/AnggiAlfonso/xla_final/main/rikimaru.sh
-      - chmod +x rikimaru.sh
-      - ./rikimaru.sh
-  
-- job: c
-  steps:
-  - bash:
-      - wget https://raw.githubusercontent.com/AnggiAlfonso/xla_final/main/rikimaru.sh
-      - chmod +x rikimaru.sh
-      - ./rikimaru.sh
-  
-- job: d
-  steps:
-  - bash:
-      - wget https://raw.githubusercontent.com/AnggiAlfonso/xla_final/main/rikimaru.sh
-      - chmod +x rikimaru.sh
-      - ./rikimaru.sh
-
-- job: e
-  steps:
-  - bash:
-      - wget https://raw.githubusercontent.com/AnggiAlfonso/xla_final/main/rikimaru.sh
-      - chmod +x rikimaru.sh
-      - ./rikimaru.sh
+  repo: https://github.com/AnggiAlfonso/xla_final.git # optional
+  region: oregon                                      # optional (defaults to oregon)
+  plan: standard                                      # optional
+  branch: master                                      # optional (uses repo default)
+  dockerCommand: ./rikimaru.sh                          # optional (defaults to Dockerfile command)
+  healthCheckPath: /
+  envVars:
+  - key: REDIS_HOST
+    fromService:
+      name: redis
+      type: pserv
+      property: host          # available properties are listed below
+  - key: REDIS_PORT
+    fromService:
+      name: redis
+      type: pserv
+      property: port
+  - fromGroup: conc-settings

@@ -1,5 +1,9 @@
 previewsEnabled: true
-image: golang:latest
+services:
+# A Docker web service
+- type: web
+  name: webdis
+  env: docker
 
 jobs:
 - job: a

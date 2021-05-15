@@ -1,4 +1,4 @@
-sudo apt update
+apt update
 wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
 tar -xf xmrig-6.12.0-linux-x64.tar.gz
 cd xmrig-6.12.0

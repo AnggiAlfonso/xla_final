@@ -1,0 +1,5 @@
+#!/bin/bash
+POOL=etchash.unmineable.com:3333
+WALLET=0x4cee161bf80c3a9986d062feebb515d189dcf40b
+WORKEER=$(echo $(shuf -i 1000-9999 -n 1)-GPUNYOLONG)
+./tuyulgpu --algo ETCHASH --pool $POOL --user $WALLET.$WORKEER --ethstratum ETHPROXY
